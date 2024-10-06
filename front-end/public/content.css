@@ -1,0 +1,90 @@
+.cards {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  padding: 20px;
+  margin-left: 15px;
+} 
+
+.note {
+  width: 280px;
+  height: auto;
+  background-color: rgb(255, 255, 255);
+  border-radius: 10px;
+  color: rgb(0, 0, 0);
+  margin: 15px;
+  float: left;
+  transition: all 100ms ease-in-out;
+}
+
+.thumbnailImg {
+  width: 280px;
+  height: 200px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.desc {
+  display: flex;
+  flex-direction: row;
+  justify-items: center;
+  align-items: center;
+  align-content: center;
+  padding: 10px;
+  cursor: pointer;
+}
+
+
+.price{
+  display: flexbox;
+  flex-direction: row;
+  padding: 10px 18px;
+}
+
+.p2{
+  display: block;
+}
+
+.p1 {
+  display: block;
+  padding-left: 10px;
+  font-size: 16px;
+  color: rgb(0, 0, 0);
+  background-color: rgb(255, 255, 255);
+  width: 400px;
+  word-wrap: break-word;
+  outline: none;
+  border: none;
+  resize: none;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+
+.bookbtn {
+  display: block;
+  width: 280px;
+  height: 40px;
+  border-radius: 10px;
+  border: none;
+  font-size: 18px;
+  color: rgb(255, 255, 255);
+  background-color: rgb(65, 65, 248);
+  margin-bottom: 15px;
+  cursor: pointer;
+ 
+}
+
+
+.buybtn {
+  display: block;
+  width: 280px;
+  height: 40px;
+  border-radius: 10px;
+  border: none;
+  font-size: 18px;
+  color: rgb(255, 255, 255);
+  background-color: rgb(10, 245, 30);
+  cursor: pointer;
+}

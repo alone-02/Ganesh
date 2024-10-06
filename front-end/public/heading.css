@@ -1,0 +1,100 @@
+.heading {
+  background-color: rgb(255, 255, 255);
+  color: rgb(255, 255, 255);
+  margin: auto -5px;
+  padding: 10px 20px;
+  display: flex;
+  flex-direction: row;
+  border-radius: 5px;
+}
+
+.logo img {
+  display: inline;
+  width: 50px;
+  height: 50px;
+  border-radius: 20px;
+  margin-right: 10px;
+}
+
+.youtubeText {
+  display: inline;
+}
+
+.heading p {
+  display: inline;
+  font-family: "Roboto Condensed", "Arial", sans-serif;
+  font-size: 30px;
+  font-weight: 700;
+  color: rgb(236, 139, 49);
+}
+
+.logo {
+  display: inline;
+}
+
+.logo div {
+  text-align: center;
+  display: inline;
+  padding-right: 3px;
+}
+
+.search-bar {
+  display: inline;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 39px;
+  width: 400px;
+  border: 1px solid rgb(196, 194, 194);
+  border-radius: 20px;
+}
+
+.search-input {
+  width: 550px;
+  height: 37px;
+  background-color: rgb(223, 235, 245);
+  color: rgb(160, 160, 160);
+  font-size: 16px;
+  padding: 15px;
+  border-radius: 50px 5px 5px 50px;
+  border: none;
+}
+
+.search-button {
+  cursor: pointer;
+  width: 60px;
+  height: 35px;
+  border-left: 1px solid rgb(133, 133, 133);
+  padding: 5px 15px 5px 10px;
+  border-radius: 5px 50px 50px 5px;
+  color: gray;
+}
+
+.search-button :active {
+  color: rgb(46, 112, 236);
+}
+
+
+.searchdiv {
+  display: inline;
+  margin-left: 250px;
+}
+
+.loginheaddiv {
+  display: inline;
+  float: right;
+  margin-left:250px;
+
+}
+
+.login {
+  background-color: rgb(62, 123, 236);
+  width: 80px;
+  height: 40px;
+  border: none;
+  border-radius: 30px;
+  font-size: 15px;
+  color: white;
+  display: inline;
+}
+

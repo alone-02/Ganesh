@@ -1,0 +1,23 @@
+.sideBar {
+  display: inline;
+  height: auto;
+  margin-top: 10px;
+
+}
+
+.sideoption {
+  position: sticky;
+  display: inline-block;
+  height: 1300px;
+  width: 250px;
+  padding: 20px;
+  background-color: rgb(187, 205, 238);
+  border-radius: 15px;
+}
+
+.sideoption a {
+  display: block;
+  color: black;
+  cursor: pointer;
+  margin-bottom: 10px;
+}
