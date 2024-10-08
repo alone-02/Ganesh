@@ -1,9 +1,11 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import { IdolContext } from "./IdolContext";
 import PlayerList from "./IdoldetailsList";
 
 function Idoldetails() {
-  const { idolList } = useContext(IdolContext);
+  const [idolList, setIndolList] = useState([]);
+
+
 
   return idolList.map((idol) => (
     <PlayerList

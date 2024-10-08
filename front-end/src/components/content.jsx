@@ -17,7 +17,7 @@ function Content() {
       }
     }
     fetchIdol();
-  }, [setIdolList]);
+  }, [idolList]);
 
   return idolList.map((idol) => (
     <IdolList
