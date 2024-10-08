@@ -569,4 +569,4 @@ var content ={
 
 }
 
-export default content;
+module.exports = content;
