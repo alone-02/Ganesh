@@ -9,6 +9,7 @@ var content ={
         "page": 1,
         "category": "software"
     },
+
     "data": {
         "best_sellers": [
             {
