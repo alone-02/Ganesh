@@ -1,51 +1,60 @@
+.signupform {
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  font-family: "Roboto Condensed", "Arial", sans-serif;
 
-.signupform{
-    display: flex;
-    flex-direction: column;
-    justify-items: center;
-    justify-content: center;
-    align-items: center;
-    align-content: center;
-    font-family: "Roboto Condensed", "Arial", sans-serif;
-
-    background-color: rgb(178, 212, 241);
-    height: 400px;
-    width:400px;
-    border-radius: 10px;
-    margin-top: 50px;
-    margin-left: 450px;
+  background-color: rgb(72, 157, 231);
+  height: auto;
+  width: 400px;
+  border-radius: 10px;
+  margin-top: 15px;
+  margin-left: 450px;
 }
 
-.loginform h2{
-    color: grey
-}
-  .username{
-    width: 300px;
-    height: 35px;
-    border-radius:8px;
-    border: none;
-    margin-bottom: 25px;
-    padding: 15px;
-    font-size: 15px;
-  }
-
-  .password{
-    width: 300px;
-    height: 35px;
-    margin-bottom: 25px;
-    border: none;
-    padding: 15px;
-    font-size: 15px;
+.loginform h2 {
+  color: grey;
 }
 
-  .loginformbtn {
-    background-color: rgb(62, 123, 236);
-    width: 160px;
-    height: 40px;
-    border: none;
-    border-radius: 30px;
-    font-size: 15px;
-    color: white;
-    display: inline;
-    margin: 10px;
-  }
+.input_singup {
+  width: 300px;
+  height: 35px;
+  border-radius: 8px;
+  border: none;
+  margin-bottom: 25px;
+  padding: 15px;
+  font-size: 15px;
+}
+
+.password {
+  width: 300px;
+  height: 35px;
+  margin-bottom: 25px;
+  border: none;
+  padding: 15px;
+  font-size: 15px;
+}
+
+.loginformbtn {
+  background-color: rgb(62, 123, 236);
+  width: 160px;
+  height: 40px;
+  border: none;
+  border-radius: 30px;
+  font-size: 15px;
+  color: white;
+  display: inline;
+  margin: 10px;
+}
+
+#address{
+
+  word-wrap: break-word;
+  outline: none;
+  border: none;
+  resize: none;
+  overflow: hidden;
+}

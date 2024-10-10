@@ -11,21 +11,21 @@ function Content() {
       try {
         const response = await axios.get("/api");
         const result = response.data;
-        setIdolList(result.data.best_sellers);
+        setIdolList(result);
       } catch (err) {
         console.log(err);
       }
     }
     fetchIdol();
-  }, [idolList]);
+  }, []);
 
   return idolList.map((idol) => (
     <IdolList
-      key={idol.rank}
-      id={idol.rank}
-      title={idol.product_title}
-      thumbnail={idol.product_photo}
-      price={idol.product_price}
+      key={idol.id}
+      id={idol.id}
+      title={idol.title}
+      thumbnail={idol.image}
+      price={idol.price}
     />
   ));
 }

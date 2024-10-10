@@ -4,9 +4,9 @@ import { IdolProvider } from "./components/IdolContext.jsx";
 import Heading from "./components/heading.jsx";
 import Content from "./components/content.jsx";
 import Sidebar from "./components/Sidebar.jsx";
-import Pagecontrol from "./components/Pagecontrol.jsx";
+//import Pagecontrol from "./components/Pagecontrol.jsx";
 import Login from "./components/Login.jsx";
-import Signup from "./components/signup.jsx";
+import Signup from "./components/Signup.jsx";
 import Idoldetails from "./components/Idoldetails.jsx";
 
 function AppContent() {
@@ -31,11 +31,7 @@ function AppContent() {
           </div>
         </div>
 
-        {!signIn && (
-          <div className="pagecontrol">
-            <Pagecontrol />
-          </div>
-        )}
+      
       </div>
     </IdolProvider>
   );

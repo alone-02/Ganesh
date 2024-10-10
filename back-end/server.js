@@ -1,35 +1,27 @@
 const express = require("express");
 const cors = require("cors");
-const content = require("./content.js");
 const env = require("dotenv");
-
-const app = express();
-const port = 2000;
+const morgan = require("morgan");
+const connectMongo = require("./config/mongoDBConfig.js"); //database connection
+//import routers
+const routerProduct = require("./routers/router_product.js");
+const routerUser = require("./routers/router_auth.js");
 
 env.config();
-require('dotenv/config');
-app.use(express.json());
+const app = express();
+const port = process.env.PORT;
+
+//middlewares
 app.use(cors());
+app.use(express.json());
+app.use(morgan("tiny"));
 
+// connect to Database
+connectMongo();
 
-app.get("/api", async (req, res) => {
-  try {
-    res.send(content);
-  } catch (err) {
-    res.status(500).send("Server error");
-  }
-});
-
-app.post("/api/product", async (req, res) => {
-  const newProduct = req.body;
-  try {
-    console.log("new",newProduct);
-    res.send(newProduct);
-  } catch (err) {
-    res.status(500).send("Server error");
-  }
-});
-
+//Routers
+app.use("/api", routerProduct);
+app.use("/login", routerUser);
 
 app.listen(port, () => {
   console.log(`server running port http://localhost:${port}`);
