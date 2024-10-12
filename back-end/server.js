@@ -6,7 +6,8 @@ const connectMongo = require("./config/mongoDBConfig.js"); //database connection
 //import routers
 const routerProduct = require("./routers/router_product.js");
 const routerUser = require("./routers/router_auth.js");
-
+const routerSignup = require("./routers/router_signUp.js");
+const routerLogin = require("./routers/router_auth.js");
 env.config();
 const app = express();
 const port = process.env.PORT;
@@ -22,6 +23,8 @@ connectMongo();
 //Routers
 app.use("/api", routerProduct);
 app.use("/login", routerUser);
+app.use("/api/signup",routerSignup);
+app.use("/api/login",routerLogin);
 
 app.listen(port, () => {
   console.log(`server running port http://localhost:${port}`);

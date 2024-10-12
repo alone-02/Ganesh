@@ -1,29 +1,34 @@
 .signupform {
   display: flex;
   flex-direction: column;
-  justify-items: center;
+  
   justify-content: center;
   align-items: center;
   align-content: center;
+  text-align: center;
   font-family: "Roboto Condensed", "Arial", sans-serif;
 
-  background-color: rgb(72, 157, 231);
+  background-color: rgb(255, 255, 255);
   height: auto;
-  width: 400px;
+  width: 450px;
   border-radius: 10px;
-  margin-top: 15px;
-  margin-left: 450px;
+  margin: 20px 0px 20px 450px;
+  padding: 10px;
+  box-shadow: 1px 3px 10px 5px grey;
 }
 
-.loginform h2 {
-  color: grey;
+.signupform h2 {
+  color: rgb(27, 118, 238);
+  padding: 10px;
+  font-weight: 1000;
+  font-size: 30px;
 }
 
 .input_singup {
-  width: 300px;
+  width: 320px;
   height: 35px;
-  border-radius: 8px;
-  border: none;
+  border-radius: 5px;
+  border : 1px solid grey;
   margin-bottom: 25px;
   padding: 15px;
   font-size: 15px;
@@ -38,23 +43,37 @@
   font-size: 15px;
 }
 
-.loginformbtn {
+.loginbtndiv{
+
+}
+
+.Signupformbtn {
   background-color: rgb(62, 123, 236);
-  width: 160px;
+  width: 150px;
   height: 40px;
   border: none;
-  border-radius: 30px;
+  border-radius: 6px;
   font-size: 15px;
   color: white;
   display: inline;
   margin: 10px;
+  
+}
+
+#signupCancelBtn{
+  background-color: rgb(253, 67, 67);
 }
 
 #address{
 
   word-wrap: break-word;
   outline: none;
-  border: none;
+
   resize: none;
   overflow: hidden;
+  padding-left: 10px;
+  font-size: 16px;
+  color: rgb(2, 2, 2);
+  height: 100px;
+  width: 320px;
 }

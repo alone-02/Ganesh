@@ -6,14 +6,16 @@
 }
 
 body {
-  background-color: rgb(241, 240, 240);
+  background-color: rgb(143, 143, 143);
   padding: 0px 0px;
   min-height: 100vh;
-  
 }
 
 .body{
   display: flex;
   flex-direction: row;
-  
+}
+
+.container{
+  width: 100%;
 }

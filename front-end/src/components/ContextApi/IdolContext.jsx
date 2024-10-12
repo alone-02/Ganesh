@@ -1,5 +1,6 @@
+import axios from "axios";
 import React, { useState, createContext } from "react";
-
+import { useEffect} from "react";
 const IdolContext = createContext();
 
 function IdolProvider({ children }) {
@@ -7,9 +8,22 @@ function IdolProvider({ children }) {
   const [idolId, setIdolId] = useState({
     id: "",
     title: "",
-    author: "",
-    description: "",
+    thumbnail: "",
+    price: "",
   });
+
+  useEffect(() => {
+    async function fetchIdol() {
+      try {
+        const response = await axios.get("/api");
+        const result = response.data;
+        setIdolList(result);
+      } catch (err) {
+        console.log(err);
+      }
+    }
+    fetchIdol();
+  }, []);
 
   return (
     <IdolContext.Provider value={{ idolList, setIdolList, idolId, setIdolId }}>

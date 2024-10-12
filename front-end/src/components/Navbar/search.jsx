@@ -1,7 +1,7 @@
 import React, { useState, useContext } from "react";
 import SearchIcon from "@mui/icons-material/Search";
 import axios from "axios";
-import { IdolContext } from "./IdolContext";
+import { IdolContext } from "../ContextApi/IdolContext";
 
 function Search() {
   const [searchText, setSearchText] = useState();

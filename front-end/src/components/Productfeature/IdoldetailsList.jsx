@@ -1,5 +1,5 @@
 import React, { useState, useContext } from "react";
-import { IdolContext } from "./IdolContext";
+import { IdolContext } from "../ContextApi/IdolContext";
 import { useNavigate } from "react-router-dom";
 
 function IdoldetailsList({ id, thumbnail, title, price, description }) {
@@ -11,31 +11,12 @@ function IdoldetailsList({ id, thumbnail, title, price, description }) {
     setIdolId({
       id: id,
       title: title,
-      price: price,
-      description: description,
+      thumbnail : thumbnail,
+      price: price
     });
-    navigate("/idolDetails");
+    navigate(`/idolDetails/`);
   }
 
-  function search(event) {
-    console.log("10author", event);
-    setAuthorName(event);
-    searchAuthor(event);
-  }
-
-  async function searchAuthor(query) {
-    console.log("11author", AuthorName);
-    try {
-      const response = await axios.get(`/api/search`, {
-        params: { query: query },
-      });
-      const result = response.data;
-      setIdolList(result.items);
-    } catch (err) {
-      console.log(err);
-    }
-    setAuthorName("");
-  }
 
   return (
     <div className="playerList">

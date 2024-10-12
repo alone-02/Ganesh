@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import AccountCircleOutlinedIcon from '@mui/icons-material/AccountCircleOutlined';
+import { Link } from "react-router-dom";
 
 function Dropdown() {
   const [istoggle, setToggle] = useState(false);
@@ -12,13 +13,13 @@ function Dropdown() {
   return (
     <>
       <div className="accountIcon">
-        <AccountCircleOutlinedIcon style={{ fontSize: "40px" }} onClick={toggle} />
+        <AccountCircleOutlinedIcon style={{ fontSize: "40px", color:"white", fontWeight:"400px"}} onClick={toggle} />
       </div>
         {istoggle && (
-          <div className="toggle" >
-            <a href="/account">Profile</a>
-            <a href="/sign out">Orders</a>
-            <a href="/sign out">Sign Out</a>
+          <div className="toggleoption_div" >
+            <Link to="/account" className="toggleoption">Profile</Link>
+            <Link to="/orders" className="toggleoption">Orders</Link>
+            <Link to="/sign out" className="toggleoption">Sign Out</Link>
           </div>
         )}
     

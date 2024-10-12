@@ -1,31 +1,25 @@
 const express = require("express");
-const Product = require("../models/model_users");
-const User = require("../models/model_users");
+const signupUser = require("../models/model_signUp");
 
 const router = express.Router();
 
-router.get("/login", async (req, res) => {
+router.post("/", async (req, res) => {
+    console.log(req.body.email);
     try {
-        
-    } catch (err) {
-        
-    }
-});
-
-router.post("/signup", async (req, res) => {
-    const user = new User({
-        id: req.body.id,
-        image: req.body.image,
-        title: req.body.title,
-        price: req.body.price,
+    const SignupUser = await signupUser.findOne({
+        email: req.body.email,
+        password: req.body.password,
     });
-
-    try {
-        const createdUser = await user.save();
-        res.status(201).json(createdUser);
+    if (!SignupUser) {
+        res.status(500).json({
+            success: false
+        });
+    }
+    console.log(SignupUser);
+    res.send(SignupUser);
 
     } catch (err) {
-        console.error("Error Reg User:", err);
+        console.error("Error:", err);
         res.status(500).json({
             error: err.message,
             success: false

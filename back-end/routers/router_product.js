@@ -21,12 +21,16 @@ router.get("/", async (req, res) => {
     }
 });
 
-router.post("/api/products", async (req, res) => {
+router.post("/products", async (req, res) => {
+   const {title, thumbnail, price} = req.body;
+   console.log("Request body:", req.body.title);
+
     const product = new Product({
-        id: req.body.id,
-        image: req.body.image,
-        title: req.body.title,
-        price: req.body.price,
+        title: title,
+        thumbnail: {
+            image_url: thumbnail.image_url,
+        },
+        price : price
     });
 
     try {
