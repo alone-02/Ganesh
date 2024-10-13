@@ -16,6 +16,10 @@ const productSchema = new Schema({
     type: String,
     required: true,
   },
+  stock:{
+    type: String,
+    required: true,
+  }
 });
 
 const Product = mongoose.model("Product", productSchema);
